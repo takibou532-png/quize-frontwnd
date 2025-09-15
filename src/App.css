@@ -1,0 +1,368 @@
+/* Navbar أساسي */
+.custom-offcanvas {
+    transition: transform 0.35s ease-in-out !important;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* العنوان والـheader */
+.custom-offcanvas .offcanvas-header {
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+
+/* تحسين للـbtn اللي يغلق */
+.btn-close {
+    filter: invert(40%);
+}
+
+nav {
+    position: fixed;
+    /* يخلي الـnavbar يثبت */
+    top: 0;
+    /* يخليه يلصق فالاعلى */
+    left: 0;
+    width: 100%;
+    /* يغطي كامل العرض */
+    z-index: 1050;
+    /* باش يكون فوق الـsidebar والكونتنت */
+
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d4d0d0ff;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.039);
+
+}
+
+/* اللوجو + النص */
+.navbar-brand-custom {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* صورة اللوجو */
+.logo {
+    height: 50px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+/* النص */
+.brand-text {
+    color: green;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover على النص */
+.brand-text:hover {
+    color: #145a32;
+    /* أخضر غامق */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .logo {
+        height: 40px;
+    }
+
+    .brand-text {
+        font-size: 1.1rem;
+    }
+}
+
+.sidebar-link {
+    color: #198754 !important;
+    /* أخضر */
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+ul {
+    position: sticky;
+    top: 60px;
+    padding-top: 10px;
+}
+
+.sidebar-link:hover {
+    background-color: #e6f4ea;
+    transform: translateX(5px);
+
+}
+
+
+
+.active-link {
+    background-color: #198754 !important;
+    color: #fff !important;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 128, 0, 0.2);
+}
+
+
+
+/* الحاوية الرئيسية */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* اللوقو */
+.home-logo {
+    width: 220px;
+    margin-bottom: 20px;
+    animation: bounceIn 2s ease;
+    transition: transform 0.3s ease;
+}
+
+.home-logo:hover {
+    transform: scale(1.1);
+}
+
+/* العنوان بالإنجليزية */
+.home-title {
+    color: green;
+    font-weight: bold;
+    font-size: 32px;
+    margin: 10px 0;
+    animation: slideUp 1s ease;
+}
+
+/* العنوان بالعربية */
+.home-title-ar {
+    color: green;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 5px 0 20px;
+    direction: rtl;
+    animation: slideUp 1.2s ease;
+}
+
+/* النصوص الثانوية */
+.home-subtitle {
+    color: #555;
+    font-size: 18px;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* الأنيميشن */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #1c7c54;
+    /* أخضر */
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0 auto 40px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #1c7c54;
+    /* نفس الأخضر */
+    font-weight: bold;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.about-card:hover {
+    background-color: #f1f1f1;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #1c7c54;
+    margin-bottom: 10px;
+}
+
+/* Animation عند الفتح */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Styling */
+.info-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 128, 0, 0.2);
+}
+
+.info-card.expanded {
+    background-color: #f8fff9;
+    border: 1px solid #cce5cc;
+}
+
+/* 🎨 أنماط عامة */
+body {
+    background-color: #f9f9f9;
+    font-family: "Tajawal", sans-serif;
+}
+
+/* ✨ زر الجواب */
+.btn.transition {
+    transition: all 0.25s ease-in-out;
+    border: 1px solid #e0e0e0;
+}
+
+/* Hover للأجوبة (قبل الاختيار) */
+.btn.transition:not(:disabled):hover {
+    background-color: #f0fdf4;
+    /* أخضر فاتح */
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(16, 185, 129, 0.25);
+    border-color: #198754;
+}
+
+/* ✅ صحيح */
+.bg-success {
+    animation: pulseGreen 0.4s ease-in-out;
+}
+
+@keyframes pulseGreen {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ❌ خطأ */
+.bg-danger {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* 🏆 كارد النتيجة */
+.card .text-warning {
+    filter: drop-shadow(0 0 2px rgba(255, 193, 7, 0.7));
+
+}
