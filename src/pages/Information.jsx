@@ -8,7 +8,7 @@ function Information() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/informations")
+            .get("https://islamicquize.onrender.com/informations")
             .then((res) => setInfos(res.data))
             .catch((err) => console.error("❌ Error fetching infos:", err));
     }, []);

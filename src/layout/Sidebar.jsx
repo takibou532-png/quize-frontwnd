@@ -12,7 +12,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/categories")
+      .get("https://islamicquize.onrender.com/categories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error("Error fetching categories:", err));
   }, []);

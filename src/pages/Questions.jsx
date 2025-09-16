@@ -17,7 +17,7 @@ export default function Questions() {
             try {
                 setLoading(true);
                 const res = await axios.get(
-                    `http://localhost:8080/questions/by_category/${categoryname}`
+                    `https://islamicquize.onrender.com/questions/by_category/${categoryname}`
                 );
                 setQuestions(res.data);
             } catch (err) {
