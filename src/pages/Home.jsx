@@ -12,7 +12,7 @@ export default function Home() {
         Welcome to Islamic Quiz Platform
       </h1>
       <h2 className="home-title-ar">
-        مرحبًا بكم في منصة الاختبارات الإسلامية
+        مرحبًا بكم في منصة الأسئلة والمعلومات الدينية
       </h2>
 
       <p className="home-subtitle">
