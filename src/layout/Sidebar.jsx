@@ -24,7 +24,7 @@ export default function Sidebar() {
         }
       })
       .catch((err) => console.error("Error fetching categories:", err));
-  }, [apiUrl]);
+  }, []);
 
   const closeOffcanvas = () => {
     const offcanvasEl = document.getElementById("sidebarOffcanvas");
