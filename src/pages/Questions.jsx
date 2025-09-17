@@ -5,6 +5,7 @@ import { CheckCircle, XCircle, Loader2, Trophy } from "lucide-react";
 import "../App.css";
 import questionIcon from "../assets/question.png";
 
+
 export default function Questions() {
     const { categoryname } = useParams();
     const [questions, setQuestions] = useState([]);
@@ -17,7 +18,7 @@ export default function Questions() {
             try {
                 setLoading(true);
                 const res = await axios.get(
-                    `https://islamicquize.onrender.com/questions/by_category/${categoryname}`
+                    `https://islamicquize.onrender.com/questions/by_category/${encodeURIComponent(categoryname)}`
                 );
                 setQuestions(res.data);
             } catch (err) {
