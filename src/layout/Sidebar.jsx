@@ -10,11 +10,11 @@ import "../App.css";
 export default function Sidebar() {
   const [categories, setCategories] = useState([]);
   const location = useLocation();
-
+  const API_BASE = "https://islamicquize.onrender.com";
 
   useEffect(() => {
     axios
-      .get(`https://islamicquize.onrender.com/categories`)
+      .get(`${API_BASE}/categories`)
       .then((res) => {
         // console.log("Categories fetched:", res.data); // Debug
         if (Array.isArray(res.data)) {

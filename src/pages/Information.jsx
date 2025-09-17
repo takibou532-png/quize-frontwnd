@@ -6,11 +6,11 @@ import "../App.css";
 function Information() {
     const [infos, setInfos] = useState([]);
     const [expandedId, setExpandedId] = useState(null);
-
+    const API_BASE = "https://islamicquize.onrender.com";
 
     useEffect(() => {
         axios
-            .get(`https://islamicquize.onrender.com/informations`)
+            .get(`${API_BASE}/informations`)
             .then((res) => setInfos(res.data))
             .catch((err) => console.error("❌ Error fetching infos:", err));
     }, []);

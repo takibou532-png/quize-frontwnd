@@ -12,13 +12,13 @@ export default function Questions() {
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
-
+    const API_BASE = "https://islamicquize.onrender.com";
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
                 setLoading(true);
                 const res = await axios.get(
-                    `https://islamicquize.onrender.com/questions/by_category/${encodeURIComponent(categoryname)}`
+                    `${API_BASE}/questions/by_category/${encodeURIComponent(categoryname)}`
                 );
                 setQuestions(res.data);
             } catch (err) {
